@@ -47,3 +47,17 @@ console.log(a,b);
 }
 console.log(a,b);
 
+//hoisting
+
+console.log(a);
+var a=10;
+console.log(a);
+
+console.log(a);
+const a=10;
+console.log(a);
+
+console.log(a);
+let a=10;
+console.log(a);
+
