@@ -10,3 +10,8 @@ console.log(msg);
 
 }
 sumbitform("form sumbitted",db)
+
+
+array.forEach(element => {
+    
+});

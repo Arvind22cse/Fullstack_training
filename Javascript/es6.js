@@ -13,7 +13,7 @@ var mark=[90,95,99]
 var[m1,m2]=mark
 console.log(m1,m2);
 
-
+//the spread operator expands elements, while the rest operator collects elements into an array
 //spread
 
 a=["hai","bye","hello","world"]
@@ -24,40 +24,45 @@ comb=[...a,...b]
 console.log(comb);
 
 //rest
+funct=(...r)=>{
+console.log(r);
+
+}
+funct("hello",1,3)
+
+
 const[x,y,...z]=a;
 console.log(x);
 console.log(y);
 console.log(z);
 
 
-function rest(...foods){
 
-}
 
 //scope
 //let-block or local scope
 //const,var-global scope 
-a=5
-b=5
+k=5
+h=5
 console.log(a,b);
 {
-    let a=10
-    let b=20
-    console.log(a,b);
+    let k=10
+    let h=20
+    console.log(k,h);
 }
-console.log(a,b);
+console.log(k,h);
 
 //hoisting
 
-console.log(a);
-var a=10;
-console.log(a);
+// console.log(a);
+// var a=10;
+// console.log(a);
 
-console.log(a);
-const a=10;
-console.log(a);
+// console.log(a);
+// const a=10;
+// console.log(a);
 
-console.log(a);
-let a=10;
-console.log(a);
+// console.log(a);
+// let a=10;
+// console.log(a);
 
