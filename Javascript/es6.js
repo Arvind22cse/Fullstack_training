@@ -26,11 +26,10 @@ console.log(comb);
 //rest
 funct=(...r)=>{
 console.log(r);
-
 }
 funct("hello",1,3)
 
-
+//..............
 const[x,y,...z]=a;
 console.log(x);
 console.log(y);
