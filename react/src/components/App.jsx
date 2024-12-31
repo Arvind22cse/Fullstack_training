@@ -8,6 +8,7 @@ import Home from './components/pages/Home'
 import {BrowserRouter,Routes,Route} from "react-router-dom"
 import About from './components/pages/About'
 import Useffect from './components/pages/Useeffect'
+import Useref from './pages/Useref'
 function App() {
   return (
     <div>
@@ -25,6 +26,7 @@ function App() {
       <Route path="/gallery" element={<Gallery/>}/>
       <Route path="/contact" element={<Contact/>}/>
       <Route path="/useeffect" element={<Useffect/>}/>
+      <Route path="/useref" element={<Useref/>}/>
 
       </Routes> 
       </BrowserRouter>

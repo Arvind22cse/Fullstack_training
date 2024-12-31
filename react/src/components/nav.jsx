@@ -18,6 +18,12 @@ export default function Nav() {
         <li>
           <a href="/useeffect">Use Effect</a>
         </li>
+        <li>
+          <a href="/useref">Use ref</a>
+        </li>
+        <li>
+          <a href="/usecontext">Use Context</a>
+        </li>
       </ul>
     </div>
   );

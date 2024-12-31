@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
-function Useffect() {
+// import { useState, useEffect } from "react";
+// import axios from "axios";
+// function Useffect() {
   //   const [text, setText] = useState("Kongu");
 
   //   useEffect(() => {
@@ -21,20 +21,97 @@ function Useffect() {
   //     </>
   //   );
 
+//   var [post, setPost] = useState([]);
+//   useEffect(() => {
+//     axios
+//       .get("https://jsonplaceholder.typicode.com/posts/")
+//       .then((res) => {
+//         console.log(res.data);
+//         setPost(res.data);
+//       })
+//       .catch((err) => console.log(err));
+//   }, []);
+//   return (
+//     <section>
+//       <h1>Fecthing data from Json placeholder api</h1>
+//       <h2>Post are</h2>
+//       <ol>
+//         {post.map((data) => (
+//           <li key={data.id}>{data.title}</li>
+//         ))}
+//       </ol>
+//     </section>
+//   );
+// }
+
+// export default Useffect;
+// AIzaSyDalotYmuwwLT76jtzMfHmx4t1N5QgtgAc
+// import { useState, useEffect } from "react";
+// import axios from "axios";
+
+// function Useffect() {
+//   var [post, setPost] = useState([]);
+//   const [fetch, setFetch] = useState(false);
+
+//   useEffect(() => {
+//     if (fetch) {
+//       axios
+//         .get("https://jsonplaceholder.typicode.com/posts/")
+//         .then((res) => {
+//           console.log(res.data);
+//           setPost(res.data);
+//         })
+//         .catch((err) => console.log(err));
+//     }
+//   }, [fetch]);
+
+//   const fetchData = () => {
+//     setFetch(true);
+//   };
+
+//   return (
+//     <section>
+//       <h1>Fetching data from Json placeholder API</h1>
+//       <button onClick={fetchData}>Fetch Posts</button>
+//       <h2>Posts are</h2>
+//       <ol>
+//         {post.map((data) => (
+//           <li key={data.id}>{data.title}</li>
+//         ))}
+//       </ol>
+//     </section>
+//   );
+// }
+
+// export default Useffect;
+import { useState, useEffect } from "react";
+import axios from "axios";
+
+function Useffect() {
   var [post, setPost] = useState([]);
+  const [fetch, setFetch] = useState(false);
+
   useEffect(() => {
-    axios
-      .get("https://jsonplaceholder.typicode.com/posts/")
-      .then((res) => {
-        console.log(res.data);
-        setPost(res.data);
-      })
-      .catch((err) => console.log(err));
-  }, []);
+    if (fetch) {
+      axios
+        .get("https://jsonplaceholder.typicode.com/posts/")
+        .then((res) => {
+          console.log(res.data);
+          setPost(res.data);
+        })
+        .catch((err) => console.log(err));
+    }
+  }, [fetch]);
+
+  const fetchData = () => {
+    setFetch(true);
+  };
+
   return (
     <section>
-      <h1>Fecthing data from Json placeholder api</h1>
-      <h2>Post are</h2>
+      <h1>Fetching data from Json placeholder API</h1>
+      <button onClick={fetchData}>Fetch Posts</button>
+      <h2>Posts are</h2>
       <ol>
         {post.map((data) => (
           <li key={data.id}>{data.title}</li>
