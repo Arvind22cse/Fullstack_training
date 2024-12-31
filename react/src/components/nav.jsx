@@ -15,6 +15,9 @@ export default function Nav() {
         <li>
           <a href="/contact">Contact us</a>
         </li>
+        <li>
+          <a href="/useeffect">Use Effect</a>
+        </li>
       </ul>
     </div>
   );
