@@ -4,6 +4,7 @@ function Component2() {
   return (
     <div>
         Comp2
+        To avoid prop drilling we are using Use Context
       <Component3/>
     </div>
   )

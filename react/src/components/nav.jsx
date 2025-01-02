@@ -24,6 +24,9 @@ export default function Nav() {
         <li>
           <a href="/usecontext">Use Context</a>
         </li>
+        <li>
+          <a href="/usememo">Use Memo</a>
+        </li>
       </ul>
     </div>
   );

@@ -10,6 +10,7 @@ import About from './components/pages/About'
 import Useffect from './components/pages/Useeffect'
 import Useref from './components/pages/Useref'
 import Component1 from './components/pages/Context_component/Component1'
+import Usememo from './components/pages/Usememo'
 function App() {
   return (
     <div>
@@ -29,6 +30,8 @@ function App() {
       <Route path="/useeffect" element={<Useffect/>}/>
       <Route path="/useref" element={<Useref/>}/>
       <Route path="/usecontext" element={<Component1/>}/>
+      <Route path="/usememo" element={<Usememo/>}/>
+
 
       </Routes> 
       </BrowserRouter>
