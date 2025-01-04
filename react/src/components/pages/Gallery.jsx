@@ -13,10 +13,10 @@ export default function Gallery() {
       <h1>The count is{c}</h1>
       <h1>The count is{d}</h1>
 
-      <button onDoubleClick={increment}>Increment</button>
-      <button onClick={()=>{ setc(d+1)}}>Inc</button>
-      <button onClick={()=>setc(d-1)}>DEC</button>
-      <button onClick={()=>{setc(0)}}>Reset</button>
+      <button onDoubleClick={increment} className='butt'>Increment</button>
+      <button onClick={()=>{ setc(d+1)}} className='butt'>Inc</button>
+      <button onClick={()=>setc(d-1)} className='butt'>DEC</button>
+      <button onClick={()=>{setc(0)}} className='butt'>Reset</button>
     </div>
   )
 }

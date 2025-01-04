@@ -3,7 +3,7 @@ import '../assets/Css/Navbar.css'
 export default function Nav() {
   
   return (
-    <div>
+    <div className="navbar">
       <ul>
         <li>
           <a href="/">Home</a>
@@ -26,6 +26,12 @@ export default function Nav() {
         </li>
         <li>
           <a href="/usememo">Use Memo</a>
+        </li>
+        <li>
+          <a href="/form">Form</a>
+        </li>
+        <li>
+          <a href="/signin">Login</a>
         </li>
       </ul>
     </div>

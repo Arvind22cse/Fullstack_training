@@ -11,6 +11,10 @@ import Useffect from './components/pages/Useeffect'
 import Useref from './components/pages/Useref'
 import Component1 from './components/pages/Context_component/Component1'
 import Usememo from './components/pages/Usememo'
+import Form from './components/pages/Form'
+import Anime from './components/pages/Anime'
+import Signup from './components/pages/Signup'
+import Signin from './components/pages/Signin'
 function App() {
   return (
     <div>
@@ -31,7 +35,11 @@ function App() {
       <Route path="/useref" element={<Useref/>}/>
       <Route path="/usecontext" element={<Component1/>}/>
       <Route path="/usememo" element={<Usememo/>}/>
-
+      <Route path="/form" element={<Form/>}/>
+      <Route path="/anime" element={<Anime/>}/>
+      <Route path="/signup" element={<Signup/>}/>
+      <Route path="/signin" element={<Signin/>}/>
+ 
 
       </Routes> 
       </BrowserRouter>

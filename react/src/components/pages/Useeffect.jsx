@@ -125,7 +125,7 @@
 // export default Useffect;
 import { useState, useEffect } from "react";
 import axios from "axios";
-
+import '../../assets/Css/Fetch.css'
 function Useffect() {
   const [post, setPost] = useState([]);
   const [fetch, setFetch] = useState(false);
@@ -149,7 +149,7 @@ function Useffect() {
   return (
     <section>
       <h1>Fetching data from JSON Placeholder API</h1>
-      <button onClick={fetchData}>Fetch Posts</button>
+      <button onClick={fetchData} className="fetch">Fetch Posts</button>
       <h2>Posts are</h2>
       <ol>
         {post.map((data) => (
