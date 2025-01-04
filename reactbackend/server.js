@@ -4,14 +4,16 @@ import path from 'path'
 import mdb from 'mongoose'
 import User from './models/users.js'
 import Animeschem from './models/anime.js'
+import dotenv from "dotenv"
 var app=express()
 const PORT=3001
 app.use(cors());
 app.use(express.json());
+dotenv.config()
 // app.use(express.urlencoded({ extended: true }));
 // app.use(express.static(path.join(__dirname, 'reactbackend')));
 
-mdb.connect("mongodb://localhost:27017/kec").then(()=>{
+mdb.connect(process.env.MONGO_URL).then(()=>{
 console.log("Mongodb connected successfully");
 
 })
@@ -53,31 +55,28 @@ app.get('/json',(req,res)=>{
 //     }
   
 // })
-app.post("/login",async(req,res)=>{
-    var {email,password}=req.body
-    try{
-    var eu=await User.findOne({email:email})
-    console.log(eu);
-    if(eu){
-        if(eu.password!==password){
-        res.json({message:"Login Failed",isLoggedIn:false})
-    }
-    else{
-        res.json({message:"Login Success",isLoggedIn:true})
+app.post("/login", async (req, res) => {
+    const { email, password } = req.body;
 
-    }
-    }
-    else{
-        res.json({message:"Login Failed",isLoggedIn:false})
-   
-    }
-    
-    }
-    catch(err){
+    try {
+        const eu = await User.findOne({ email });
+        console.log(eu);
+
+        if (eu) {
+            if (eu.password !== password) {
+                res.json({ message: "Login Failed", isLoggedIn: false });
+            } else {
+                res.json({ message: "Login Success", isLoggedIn: true });
+            }
+        } else {
+            res.json({ message: "Login Failed", isLoggedIn: false });
+        }
+    } catch (err) {
         console.log(err);
-        
+        res.status(500).send("An error occurred while logging in");
     }
-})
+});
+
 app.post('/signup', async (req, res) => {
    // const { firstName, lastName, clg, email } = req.body;
   

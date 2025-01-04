@@ -1,4 +1,11 @@
 .fetch{
+    
     background-color: red;
     width:90px
+}
+.sec{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
 }

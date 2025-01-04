@@ -147,7 +147,7 @@ function Useffect() {
   };
 
   return (
-    <section>
+    <section className="sec">
       <h1>Fetching data from JSON Placeholder API</h1>
       <button onClick={fetchData} className="fetch">Fetch Posts</button>
       <h2>Posts are</h2>
