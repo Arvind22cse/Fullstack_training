@@ -1,5 +1,5 @@
 import express from 'express'
-import cors from 'cors';
+// import cors from 'cors';
 import path from 'path'
 import mdb from 'mongoose'
 import User from './models/users.js'
@@ -7,11 +7,20 @@ import Animeschem from './models/anime.js'
 import dotenv from "dotenv"
 
 import { __dirname } from './utils.js';
+import cors from 'cors';
+
+const allowedOrigins = ['https://fullstack-training-c7nk.vercel.app/'];
+
+app.use(cors({
+  origin: allowedOrigins,
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true,
+}));
 
 
 var app=express()
 const PORT=3001
-app.use(cors());
+// app.use(cors());
 app.use(express.json());
 dotenv.config()
 // app.use(express.urlencoded({ extended: true }));

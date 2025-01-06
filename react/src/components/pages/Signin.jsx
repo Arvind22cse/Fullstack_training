@@ -13,7 +13,7 @@ function Signin() {
 
         try {
             // Send a POST request to the backend with the form data
-            const request = await axios.post("http://localhost:3001/login", { email, password });
+            const request = await axios.post("https://fullstack-training-c7nk.vercel.app/login", { email, password });
             console.log(request.data);
 
             if (request.data.isLoggedIn) {
