@@ -13,19 +13,13 @@ import cors from 'cors';
 
 var app=express()
 const PORT=3001
-// app.use(cors());
+app.use(cors());
 app.use(express.json());
 dotenv.config()
 // app.use(express.urlencoded({ extended: true }));
 // app.use(express.static(path.join(__dirname, 'reactbackend')));
 
-const allowedOrigins = ['https://fullstack-training-c7nk.vercel.app/signup'];
 
-app.use(cors({
-  origin: allowedOrigins,
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  credentials: true,
-}));
 mdb.connect(process.env.MONGO_URL).then(()=>{
 console.log("Mongodb connected successfully");
 
