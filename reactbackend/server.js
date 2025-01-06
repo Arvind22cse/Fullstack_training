@@ -19,7 +19,7 @@ dotenv.config()
 // app.use(express.urlencoded({ extended: true }));
 // app.use(express.static(path.join(__dirname, 'reactbackend')));
 
-const allowedOrigins = ['https://fullstack-training-c7nk.vercel.app/'];
+const allowedOrigins = ['https://fullstack-training-c7nk.vercel.app/signup'];
 
 app.use(cors({
   origin: allowedOrigins,
