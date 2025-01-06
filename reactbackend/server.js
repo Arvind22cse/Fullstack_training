@@ -5,6 +5,10 @@ import mdb from 'mongoose'
 import User from './models/users.js'
 import Animeschem from './models/anime.js'
 import dotenv from "dotenv"
+
+import { __dirname } from './utils.js';
+
+
 var app=express()
 const PORT=3001
 app.use(cors());
