@@ -9,13 +9,6 @@ import dotenv from "dotenv"
 import { __dirname } from './utils.js';
 import cors from 'cors';
 
-const allowedOrigins = ['https://frontend-vercel-two-phi.vercel.app/'];
-
-app.use(cors({
-  origin: allowedOrigins,
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  credentials: true,
-}));
 
 
 var app=express()
@@ -26,6 +19,13 @@ dotenv.config()
 // app.use(express.urlencoded({ extended: true }));
 // app.use(express.static(path.join(__dirname, 'reactbackend')));
 
+const allowedOrigins = ['https://fullstack-training-c7nk.vercel.app/'];
+
+app.use(cors({
+  origin: allowedOrigins,
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true,
+}));
 mdb.connect(process.env.MONGO_URL).then(()=>{
 console.log("Mongodb connected successfully");
 
